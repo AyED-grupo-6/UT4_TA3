@@ -1,0 +1,34 @@
+Lenguaje Natural:
+Dado un nodo, devuelve el tamaño del subarbol generado por el mismo
+Dado un arbol, devuelve el tamaño de este
+
+Precondiciones:
+- Que exista un arbol binario
+
+Postcondiciones:
+- Se devuelve la cantidad de nodos del arbol binario
+
+
+
+Pseudocodigo:
+
+Comienzo
+
+TElemento tamano(){
+	Si (elemento = nulo)
+		devolver 0
+	Sino
+		devolver 1+hijoDer.tamano+hijoIzq.tamano
+	FinSi
+	
+}
+
+Fin
+
+Comienzo
+
+TArbol tamano(){
+	devolver raiz.tamano
+}
+
+Fin
