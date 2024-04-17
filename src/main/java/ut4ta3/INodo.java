@@ -1,3 +1,5 @@
+package ut4ta3;
+
 public interface INodo<T> {
 
     

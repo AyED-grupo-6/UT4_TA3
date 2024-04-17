@@ -1,4 +1,4 @@
-
+package ut4ta3;
 public interface ILista<T> {
 
     /**

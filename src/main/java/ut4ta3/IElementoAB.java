@@ -1,4 +1,4 @@
-
+package ut4ta3;
 import java.util.LinkedList;
 
 public interface IElementoAB<T> {

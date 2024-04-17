@@ -1,3 +1,5 @@
+package ut4ta3;
+
 public class TElementoAB<T> implements IElementoAB<T> {
 
     private Comparable etiqueta;
@@ -123,7 +125,15 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     @Override
     public int obtenerTamanio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (hijoDer == null && hijoIzq == null){
+            return 1;
+        } else if (hijoDer != null && hijoIzq == null){
+            return hijoDer.obtenerTamanio() + 1;
+        } else if (hijoIzq != null && hijoDer == null){
+            return hijoIzq.obtenerTamanio() + 1;
+        } else {
+            return hijoIzq.obtenerTamanio() + hijoDer.obtenerTamanio() + 1;
+        }
     }
 
     @Override
