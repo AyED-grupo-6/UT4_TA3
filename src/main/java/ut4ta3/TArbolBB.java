@@ -1,6 +1,9 @@
 package ut4ta3;
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> main
 
 public class TArbolBB<T> implements IArbolBB<T> {
 
@@ -91,7 +94,11 @@ public class TArbolBB<T> implements IArbolBB<T> {
 
     @Override
     public int obtenerTamanio() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (raiz == null){
+            return 0;
+        } else {
+            return raiz.obtenerTamanio();
+        }
     }
 
     @Override
