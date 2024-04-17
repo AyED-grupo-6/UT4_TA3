@@ -1,0 +1,19 @@
+Precondiciones:
+-	
+Postcondiciones:
+-	Devuelve la altura del árbol
+
+Seudocódigo:
+Int AlturaDelArbol()
+Si HijoIzq e HijoDerecho es nulo hacer
+	Retorna 0
+Si hijoIzq <> nulo hacer
+	alturaIzquierda = hijoIzq.alturaDelArbol() + 1
+Fin Si
+Si hijoIzq <> nulo hacer
+	alturaDerecha= hijoDer.alturaDelArbol() + 1 
+Fin Si
+Retornar máximo(alturaDerecho, alturaIzquierda)
+Fin
+
+

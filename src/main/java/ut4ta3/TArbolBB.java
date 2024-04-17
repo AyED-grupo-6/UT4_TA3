@@ -1,4 +1,9 @@
 package ut4ta3;
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> main
 
 public class TArbolBB<T> implements IArbolBB<T> {
 
