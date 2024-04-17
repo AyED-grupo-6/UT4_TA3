@@ -1,3 +1,5 @@
+package ut4ta3;
+
 public class TElementoAB<T> implements IElementoAB<T> {
 
     private Comparable etiqueta;
