@@ -9,7 +9,7 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     /**
      * @param unaEtiqueta
-     * @param unosDatos 
+     * @param unosDatos
      */
     @SuppressWarnings("unchecked")
     public TElementoAB(Comparable unaEtiqueta, T unosDatos) {
@@ -79,13 +79,15 @@ public class TElementoAB<T> implements IElementoAB<T> {
      */
     @Override
     public String inOrden() {
-          throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
     }
 
-   @Override
+    @Override
     public void inOrden(Lista<T> unaLista) {
-          throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
+
     }
 
     @Override
@@ -116,20 +118,35 @@ public class TElementoAB<T> implements IElementoAB<T> {
         this.hijoDer = elemento;
     }
 
-    
-
     @Override
     public int obtenerAltura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+
+        int alturaIzq = 0;
+        int alturaDer = 0;
+
+        if (this.hijoDer == null && this.hijoIzq == null) {
+            return 0;
+        }
+        if (hijoDer != null) {
+            alturaDer = hijoDer.obtenerAltura() + 1;
+        }
+        if (hijoIzq != null) {
+            alturaIzq = hijoIzq.obtenerAltura() + 1;
+        }
+
+        if (alturaDer < alturaIzq) {
+            return alturaIzq;
+        } else
+            return alturaDer;
     }
 
     @Override
     public int obtenerTamanio() {
-        if (hijoDer == null && hijoIzq == null){
+        if (hijoDer == null && hijoIzq == null) {
             return 1;
-        } else if (hijoDer != null && hijoIzq == null){
+        } else if (hijoDer != null && hijoIzq == null) {
             return hijoDer.obtenerTamanio() + 1;
-        } else if (hijoIzq != null && hijoDer == null){
+        } else if (hijoIzq != null && hijoDer == null) {
             return hijoIzq.obtenerTamanio() + 1;
         } else {
             return hijoIzq.obtenerTamanio() + hijoDer.obtenerTamanio() + 1;
@@ -138,15 +155,14 @@ public class TElementoAB<T> implements IElementoAB<T> {
 
     @Override
     public int obtenerNivel(Comparable unaEtiqueta) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
     }
 
     @Override
     public int obtenerCantidadHojas() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        throw new UnsupportedOperationException("Not supported yet."); // To change body of generated methods, choose
+                                                                       // Tools | Templates.
     }
 
-   
-
-   	
 }

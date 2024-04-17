@@ -1,9 +1,6 @@
 package ut4ta3;
-<<<<<<< HEAD
 
 
-=======
->>>>>>> main
 
 public class TArbolBB<T> implements IArbolBB<T> {
 
@@ -89,7 +86,11 @@ public class TArbolBB<T> implements IArbolBB<T> {
 
     @Override
     public int obtenerAltura() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if (raiz != null){
+            return this.raiz.obtenerAltura();
+        } 
+        return 0;
+        
     }
 
     @Override
